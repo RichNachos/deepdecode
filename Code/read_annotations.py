@@ -54,11 +54,11 @@ def create_chromosome_annotations(chrm='chr21', base_write_path='', write_to_fil
             Variable to control writing extracted information to file
     :return: None
     '''
-    ann_file = "gencode.v34.annotation.gtf"
+    ann_file = "gencode.v46.annotation.gtf"
     col_names = ['chr_name', 'source', 'type', 'start', 'end', '.', 'strand', ',', 'other']
     assert os.path.exists(raw_data_path + ann_file), "place genome annotation file in correct directory"
     print('Reading Annotation File {}...'.format(ann_file))
-    ann = pd.read_csv(raw_data_path + ann_file, sep='\t', header=None)
+    ann = pd.read_csv(raw_data_path + ann_file, sep='\t', header=None, comment='#')
     print('Done.')
     ann.columns = col_names    # print(ann.shape)  # (2912496, 9)
 
