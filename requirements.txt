@@ -1,0 +1,12 @@
+torch==1.5.0
+tensorboard==1.14
+argparse==1.1
+biopython >=1.76
+json==2.0.9
+logomaker==0.8
+matplotlib==3.1.0
+numpy==1.18.5
+pandas==0.24.2
+seaboarn==0.10.1
+sklearn==0.21.3
+yaml==5.1.2
